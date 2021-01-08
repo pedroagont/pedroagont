@@ -6,8 +6,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink
+  NavItem
 } from 'reactstrap';
 
 const Example = (props) => {
@@ -18,30 +17,30 @@ const Example = (props) => {
   return (
     <div>
       <Navbar scrolling="true" dark expand="md" fixed="top">
-        <NavbarBrand href="/">pedroagont</NavbarBrand>
+        <NavbarBrand href="/" className="text-muted">pedroagont</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Link to="/about" className="text-muted px-2">About</Link>
+              <Link to="/about" className="text-muted px-2" onClick={toggle} >About</Link>
             </NavItem>
             <NavItem>
-              <Link to="/projects" className="text-muted px-2">Projects</Link>
+              <Link to="/projects" className="text-muted px-2" onClick={toggle} >Projects</Link>
             </NavItem>
             <NavItem>
-              <Link to="/collabs" className="text-muted px-2">Collabs</Link>
+              <Link to="/collabs" className="text-muted px-2" onClick={toggle} >Collabs</Link>
             </NavItem>
             <NavItem>
-              <Link to="/gallery" className="text-muted px-2">Gallery</Link>
+              <Link to="/gallery" className="text-muted px-2" onClick={toggle} >Gallery</Link>
             </NavItem>
             <NavItem>
-              <Link to="/press" className="text-muted px-2">Press</Link>
+              <Link to="/press" className="text-muted px-2" onClick={toggle} >Press</Link>
             </NavItem>
             <NavItem>
-              <Link to="/cv" className="text-muted px-2">CV</Link>
+              <Link to="/cv" className="text-muted px-2" onClick={toggle} >CV</Link>
             </NavItem>
             <NavItem>
-              <Link to="/contact" className="text-muted px-2">Contact</Link>
+              <Link to="/contact" className="text-muted px-2" onClick={toggle} >Contact</Link>
             </NavItem>
           </Nav>
         </Collapse>
