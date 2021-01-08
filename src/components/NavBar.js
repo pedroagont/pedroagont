@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -6,12 +7,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from 'reactstrap';
 
 const Example = (props) => {
@@ -21,31 +17,31 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar scrolling dark expand="md" fixed="top">
+      <Navbar scrolling="true" dark expand="md" fixed="top">
         <NavbarBrand href="/">pedroagont</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem className="px-2">
-              <NavLink href="#">About</NavLink>
+            <NavItem>
+              <Link to="/about" className="text-muted px-2">About</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">Projects</NavLink>
+            <NavItem>
+              <Link to="/projects" className="text-muted px-2">Projects</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">Collabs</NavLink>
+            <NavItem>
+              <Link to="/collabs" className="text-muted px-2">Collabs</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">Gallery</NavLink>
+            <NavItem>
+              <Link to="/gallery" className="text-muted px-2">Gallery</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">Press</NavLink>
+            <NavItem>
+              <Link to="/press" className="text-muted px-2">Press</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">CV</NavLink>
+            <NavItem>
+              <Link to="/cv" className="text-muted px-2">CV</Link>
             </NavItem>
-            <NavItem className="px-2">
-              <NavLink href="#">Contact</NavLink>
+            <NavItem>
+              <Link to="/contact" className="text-muted px-2">Contact</Link>
             </NavItem>
           </Nav>
         </Collapse>
