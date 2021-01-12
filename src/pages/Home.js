@@ -1,13 +1,11 @@
-import Carousel from '../components/Carousel';
-import Jumbotron from '../components/Jumbotron';
-import Footer from '../components/Footer';
+import Slider from '../components/Slider';
+import Main from '../components/Main';
 
 function Home() {
   return (
     <>
-      <Carousel />
-      <Jumbotron />
-      <Footer />
+      <Slider />
+      <Main />
     </>
   );
 }
