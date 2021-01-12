@@ -1,7 +1,7 @@
 import React from 'react';
-import { Jumbotron, Container, Row, Col } from 'reactstrap';
+import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
 
-const Example = (props) => {
+const Main = (props) => {
   return (
     <div>
       <Jumbotron className="text-center bg-transparent">
@@ -27,10 +27,12 @@ const Example = (props) => {
               <p className="small">This is a modified jumbotron that occupies the entire horizontal space of its parent. This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </Col>
           </Row>
+          <div style={{ height: '3em' }} />
+          <Button color="dark" size="lg">wujuu</Button>
         </Container>
       </Jumbotron>
     </div>
   );
 };
 
-export default Example;
+export default Main;
