@@ -3,43 +3,52 @@ import { Container, Media } from 'reactstrap';
 import Header from '../components/Header';
 
 const Press = (props) => {
+  const pressArray = [
+    {
+      id: 1,
+      src: 'https://picsum.photos/150/150',
+      alt: 'Cool stuff',
+      brand: 'United Nations',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      url: 'https://google.com',
+    },
+    {
+      id: 2,
+      src: 'https://picsum.photos/150/150',
+      alt: 'Cool stuff',
+      brand: 'United Nations',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      url: 'https://google.com',
+    },
+    {
+      id: 3,
+      src: 'https://picsum.photos/150/150',
+      alt: 'Cool stuff',
+      brand: 'United Nations',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      url: 'https://google.com',
+    },
+  ]
+
   return (
     <>
       <Header title="Press" description="This is a modified jumbotron that occupies the entire horizontal space of its parent." />
       <Container>
-        <Media>
-          <Media left top href="#">
-            <Media object src="https://picsum.photos/150/150" alt="Generic placeholder image" className="px-3" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Top aligned media
-            </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
-        <Media className="mt-3">
-          <Media left middle href="#">
-            <Media object src="https://picsum.photos/150/150" alt="Generic placeholder image" className="px-3" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Middle aligned media
-            </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
-        <Media className="mt-3">
-          <Media left bottom href="#">
-            <Media object src="https://picsum.photos/150/150" alt="Generic placeholder image" className="px-3" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Bottom aligned media
-            </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
+        {
+          pressArray.map(el => {
+            return <Media className="mb-5">
+                     <Media left href={ el.url }>
+                       <Media object src={ el.src } alt={ el.alt } className="px-3" />
+                     </Media>
+                     <Media body>
+                       <Media heading>
+                         { el.brand }
+                       </Media>
+                       { el.description }
+                     </Media>
+                   </Media>
+          })
+        }
       </Container>
     </>
   );
