@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Details from './pages/Details';
 import Collabs from './pages/Collabs';
 import Gallery from './pages/Gallery';
 import Press from './pages/Press';
@@ -24,9 +25,9 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
         <Route exact path="/projects" component={Projects}/>
-        <Route exact path="/projects/:id" component={Projects}/>
+        <Route exact path="/projects/:id" component={Details}/>
         <Route exact path="/collabs" component={Collabs}/>
-        <Route exact path="/collabs/:id" component={Collabs}/>
+        <Route exact path="/collabs/:id" component={Details}/>
         <Route exact path="/gallery" component={Gallery}/>
         <Route exact path="/press" component={Press}/>
         <Route exact path="/cv" component={CV}/>
