@@ -1,65 +1,60 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import { Button, Container, Media } from 'reactstrap';
 import Header from '../components/Header';
-import Deck from '../components/Deck';
+import { Link } from 'react-router-dom';
 
 const Projects = (props) => {
   const projectsArray = [
     {
       id: 1,
-      img: 'https://picsum.photos/300/200',
-      title: 'Kaanbal',
-      category: 'tech, social, entrepreneurship',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/kaanbal',
+      img: 'https://picsum.photos/500/300',
+      title: 'CANIETI',
+      category: 'tech, social',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      slug: 'projects/canieti',
     },
     {
       id: 2,
-      img: 'https://picsum.photos/300/200',
-      title: 'Neonwave',
-      category: 'digital marketing, tech',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/neonwave',
+      img: 'https://picsum.photos/500/300',
+      title: 'Acustik',
+      category: 'tech, social',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      slug: 'projects/acustik',
     },
     {
       id: 3,
-      img: 'https://picsum.photos/300/200',
-      title: 'DEV.F',
-      category: 'digital marketing, tech',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/devf',
-    },
-    {
-      id: 4,
-      img: 'https://picsum.photos/300/200',
-      title: 'Tech Garage',
-      category: '#digitalmarketing #tech',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/techgarage',
-    },
-    {
-      id: 5,
-      img: 'https://picsum.photos/300/200',
-      title: 'Cerebro Digital',
-      category: 'digital marketing, tech',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/cerebrodigital',
-    },
-    {
-      id: 6,
-      img: 'https://picsum.photos/300/200',
-      title: 'Internet Society',
-      category: 'digital marketing, tech',
-      description: 'Cool stuff with the Internet bois',
-      slug: 'projects/internetsociety',
-    },
+      img: 'https://picsum.photos/500/300',
+      title: 'Incuvita',
+      category: 'tech, social',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      slug: 'projects/incuvita',
+    }
   ]
 
   return (
     <>
       <Header title="Projects" description="This is a modified jumbotron that occupies the entire horizontal space of its parent." />
-      <Container className="mb-5">
-        <Deck array={projectsArray}/>
+      <Container>
+      {
+        projectsArray.map(el => {
+          return <Media key={ el.id } className="mb-5">
+            <Media left className="px-3">
+              <Media object src={ el.img } alt={ el.alt } />
+            </Media>
+            <Media body>
+              <Media heading>
+                Media heading
+              </Media>
+              { el.description}
+              <div className="my-3">
+                <Button color="dark">
+                  <Link className="text-light" to={ el.slug }>See more</Link>
+                </Button>
+              </div>
+            </Media>
+          </Media>
+        })
+      }
       </Container>
     </>
   );
