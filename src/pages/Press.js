@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Media } from 'reactstrap';
+import { Button, Container, Media } from 'reactstrap';
 import Header from '../components/Header';
 
 const Press = (props) => {
@@ -36,17 +36,22 @@ const Press = (props) => {
       <Container>
         {
           pressArray.map(el => {
-            return <Media className="mb-5">
-                     <Media left href={ el.url }>
-                       <Media object src={ el.src } alt={ el.alt } className="px-3" />
-                     </Media>
-                     <Media body>
-                       <Media heading>
-                         { el.brand }
-                       </Media>
-                       { el.description }
-                     </Media>
-                   </Media>
+            return <Media key={ el.id } className="mb-5">
+               <Media left href={ el.url }>
+                 <Media object src={ el.src } alt={ el.alt } className="px-3" />
+               </Media>
+               <Media body>
+                 <Media heading>
+                   { el.brand }
+                 </Media>
+                 { el.description }
+                 <div className="my-3">
+                   <Button size="sm" color="dark" href={ el.url }>
+                     See more
+                   </Button>
+                 </div>
+               </Media>
+             </Media>
           })
         }
       </Container>
