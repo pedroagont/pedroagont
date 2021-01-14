@@ -6,7 +6,7 @@ const Images = (props) => {
     <CardColumns>
       {
         props.array.map(el => {
-          return <Card>
+          return <Card key={ el.id }>
                     <CardImg width="100%" src={ el.src } alt={ el.alt } />
                  </Card>
         })
