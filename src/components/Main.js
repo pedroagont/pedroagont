@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 const Main = (props) => {
   return (
@@ -28,7 +29,9 @@ const Main = (props) => {
             </Col>
           </Row>
           <div style={{ height: '3em' }} />
-          <Button color="dark" size="lg">wujuu</Button>
+          <Button color="dark" size="lg">
+            <Link to="/about" className="text-light px-3">See more</Link>
+          </Button>
         </Container>
       </Jumbotron>
     </div>
