@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import Header from '../components/Header';
 import Deck from '../components/Deck';
 
@@ -82,9 +81,7 @@ const Collabs = (props) => {
   return (
     <>
       <Header title="Collabs" description="This is a modified jumbotron that occupies the entire horizontal space of its parent." />
-      <Container className="mb-5">
-        <Deck array={collabsArray}/>
-      </Container>
+      <Deck array={collabsArray}/>
     </>
   );
 };
