@@ -45,7 +45,7 @@ const Projects = (props) => {
               <Media heading>
                 Media heading
               </Media>
-              { el.description}
+              { el.description }
               <div className="my-3">
                 <Button color="dark">
                   <Link className="text-light" to={ el.slug }>See more</Link>
