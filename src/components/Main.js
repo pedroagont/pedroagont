@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Main = (props) => {
   return (
     <div>
-      <Jumbotron className="text-center bg-transparent">
+      <Jumbotron className="text-center bg-transparent" style={{ marginBottom: '0' }}>
         <Container>
           <h1 className="display-3">Bio</h1>
           <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent. This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
