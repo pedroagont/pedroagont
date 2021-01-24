@@ -1,6 +1,6 @@
 # Personal website
 
-This is a super small react-app for my personal portfolio! It's stupid simple and it was made with the create-react-app script + reactstrap components + bootstrap framework for styling. Link: [pedroagont.netlify.app](pedroagont.netlify.app)
+This is a super small react-app for my personal portfolio! It's stupid simple and it was made with the create-react-app script + reactstrap components + bootstrap framework for styling. Link: [pedroagont.netlify.app](https://pedroagont.netlify.app)
 
 
 ## Contributing
