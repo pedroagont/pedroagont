@@ -9,30 +9,35 @@ import {
 
 const items = [
   {
+    id: 1,
     src: 'https://images.unsplash.com/photo-1510582029005-689cfc56b48c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
     altText: 'Slide 1',
     caption: 'Education',
     text: 'Education'
   },
   {
+    id: 2,
     src: 'https://images.unsplash.com/photo-1500649297466-74794c70acfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
     altText: 'Slide 2',
     caption: 'Mechatronics',
     text: 'Mechatronics'
   },
   {
+    id: 3,
     src: 'https://images.unsplash.com/photo-1461248481170-e44894b0909c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80',
     altText: 'Slide 3',
     caption: 'Software',
     text: 'Software'
   },
   {
+    id: 4,
     src: 'https://images.unsplash.com/photo-1461248481170-e44894b0909c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80',
     altText: 'Slide 3',
     caption: 'Innovation',
     text: 'Innovation'
   },
   {
+    id: 5,
     src: 'https://images.unsplash.com/photo-1461248481170-e44894b0909c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80',
     altText: 'Slide 3',
     caption: 'Entrepreneurship',
@@ -66,7 +71,7 @@ const Slider = (props) => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.id}
       >
         <img className="w-100" src={item.src} alt={item.altText} />
         <CarouselCaption captionHeader={item.caption} captionText={item.text}/>
