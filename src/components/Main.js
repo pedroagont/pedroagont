@@ -7,7 +7,7 @@ const Main = (props) => {
       <Jumbotron className="text-center bg-transparent" style={{ marginBottom: '0' }}>
         <Container>
           <h1 className="display-3">Bio</h1>
-          <p className="lead">Pedro A. González is a Mexican educator and technology evangelist known for his contributions to Internet and software development, bridging the digital divide and applied social innovation.</p>
+          <p className="lead">Pedro A. González is a Mexican educator and technology evangelist known for his contributions to Internet and software development, digital inclusion and applied social innovation.</p>
         </Container>
         <Container className="mt-5">
           <Row>
