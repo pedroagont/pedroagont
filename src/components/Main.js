@@ -1,6 +1,5 @@
 import React from 'react';
-import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
-import { Link } from "react-router-dom";
+import { Jumbotron, Container, Row, Col } from 'reactstrap';
 
 const Main = (props) => {
   return (
@@ -28,10 +27,6 @@ const Main = (props) => {
               <p className="small">As guest speaker and organizer of activities related to science, education, technology, research, innovation and entrepreneurship in Los Angeles, Boston, New York, Toronto, Argentina and all over México, including invitations to Harvard, MIT, and United Nations.</p>
             </Col>
           </Row>
-          <div style={{ height: '3em' }} />
-          <Button color="dark" size="lg">
-            <Link to="/about" className="text-light px-3">See more</Link>
-          </Button>
         </Container>
       </Jumbotron>
     </div>
