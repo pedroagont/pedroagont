@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch, FaWhatsapp, FaT
 
 const Example = (props) => {
   return (
-    <footer className="footer mt-auto py-3">
+    <footer className="mt-auto py-3">
       <hr className="w-75 mt-5" />
       <Container className="text-center">
         <a href="https://instagram.com/pedroagont" className="text-dark px-3"><FaInstagram style={{ fontSize: '1.3em' }}/></a>
