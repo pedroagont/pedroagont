@@ -15,7 +15,7 @@ const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar scrolling="true" light expand="md">
+    <Navbar scrolling="true" light expand="lg">
       <NavbarBrand className="" href="/">pedroagont</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
