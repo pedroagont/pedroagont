@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const CardSingle = (props) => {
   return (
-    <div className="m-2">
-      <Card>
-        <CardImg top width="100%" src={ props.img } alt="Card image cap" />
+    <div className="mb-4 col-sm-12 col-md-6 col-lg-4">
+      <Card className="mx-auto h-100">
+        <CardImg top width="100%" src={ props.img } alt={ props.alt } />
         <CardBody>
           <CardTitle tag="h5">{ props.title }</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{ props.category }</CardSubtitle>
