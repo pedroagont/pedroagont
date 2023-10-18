@@ -2,17 +2,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  padding-bottom: 5em;
 }
 
 nav.navbar {
   padding: 0 1em;
   height: 10vh;
+  width: 100vw;
+  background-color: midnightblue;
+  text-shadow: 1px 1px 1px black;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: royalblue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 
 nav .navbar-brand {
@@ -21,7 +28,8 @@ nav .navbar-brand {
 
 nav .navbar-menu {
   list-style-type: none;
-  width: 50%;
+  width: 70%;
+  font-size: 0.8em;
 
   display: flex;
   justify-content: space-around;
@@ -38,7 +46,47 @@ header.header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 50vh;
+}
 
-  background-color: beige;
+header h1 {
+  text-shadow: 1px 1px 1px grey;
+}
+
+header p {
+  text-decoration: underline;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+ul.experience-list,
+ul.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+li.experience-list-item span {
+  font-size: 0.6em;
+  font-style: italic;
+}
+
+li.projects-list-item,
+li.dev-list-item {
+  border: 0.5px solid black;
+  padding: 1em;
+  margin: 1em 0.5em;
+  box-shadow: 3px 3px black;
+
+  display: flex;
+  gap: 2em;
+}
+
+li.projects-list-item img,
+li.dev-list-item img {
+  width: 40%;
 }
