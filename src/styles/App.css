@@ -70,7 +70,10 @@ ul.education-list {
   gap: 2em;
 }
 
-li.experience-list-item span {
+li.experience-list-item span,
+li.education-list-item span,
+li.experience-list-item a,
+li.education-list-item a {
   font-size: 0.6em;
   font-style: italic;
 }

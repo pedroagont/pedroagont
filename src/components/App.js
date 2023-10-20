@@ -48,6 +48,13 @@ function Home() {
   return (
     <>
       <Header title="Home" description="Welcome" />
+      <main className="container">
+        <p>
+          Pedro A. González is a tech professional with a track record of making
+          technology accessible and impactful, supported by a solid educational
+          background and a commitment to knowledge sharing and innovation.
+        </p>
+      </main>
     </>
   );
 }
@@ -56,25 +63,32 @@ function About() {
   return (
     <>
       <Header title="About" description="A little bit about me" />
-      <main>
+      <main className="container">
         <p>
-          Im a mechatronics engineer and lifelong enthusiast of technology. I
-          passionate educator of software development and innovation projects
-          around the world.
+          Pedro A. González is a lifelong enthusiast of digital development and
+          innovation with the mission of making technology accesible and
+          impactful.
           <br /> <br />
-          I have also cofounded a nonprofit organization to help rural
-          communities with Internet access and educational technology, as well
-          as a youth empowerment initiative to promote citizenship and social
-          impact. <br /> <br />
-          During my spare time I love to play chess, to skydive and to tell as
-          many bad jokes as I can. Pedro A. González is a Mechatronics Engineer
-          and lifelong enthusiast of technology, digital development and social
-          innovation entrepreneurship, who has participated as organizer, host,
-          workshop facilitator, lecturer and exhibitor in more than 200 science,
-          education and tech related activities between Los Angeles, Boston, New
-          York, Toronto, Argentina and all over México, which features being
-          invited as speaker to the Harvard Business School, the MIT Media Lab,
-          and the UN Head Quarters, as well as other international meetings.
+          He is the co-founder of Kaanbal.org, a non profit organization focused
+          on connecting remote communities with Internet access and tech-driven
+          education.
+          <br /> <br />
+          His journey as an educator and tech entrepreneur have contributed a
+          significantly into bridging the knowledge and digital divide,
+          positively impacting the lives of thousands.
+          <br /> <br />
+          With a background in Mechatronics Engineering, a Master in Software
+          Development and a specialization in Future Tech, Mr. González is a
+          high end professional in the field of technology.
+          <br /> <br />
+          His passion on the topic has led Mr. González to participate as an
+          international guest speaker, lecturer and presenter in dozens of
+          events around Canada, United States, Mexico, Argentina, Germany and
+          Japan, which features invitations from prestigious institutions such
+          as Harvard, the MIT Media Lab and the United Nations.
+          <br /> <br />
+          Beyond his professional life, he loves playing chess, skydiving and to
+          travel around the world as a digital nomad.
         </p>
       </main>
     </>
@@ -86,56 +100,60 @@ function Experience() {
     {
       id: 1,
       company: 'University of Guelph',
-      position: 'Web Development Instructor',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
+      position: 'Software Programming Instructor',
       location: 'Ontario, CA / Remote',
-      url: 'http://example.com',
+      fromTo: '2023 - Actual',
+      url: 'https://www.uoguelph.ca',
     },
     {
       id: 2,
       company: 'Lighthouse Labs Inc',
-      position: 'Web Development Instructor',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
+      position:
+        'Software Development Instructor, Mentor, Tech Interviewer, Project Evaluator',
       location: 'Vancouver, CA / Remote',
-      url: 'http://example.com',
+      fromTo: '2021 - Actual',
+      url: 'https://www.lighthouselabs.ca',
     },
     {
       id: 3,
       company: 'DEV.F',
-      position: 'Web Development Instructor',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
-      location: 'Cancún, MX / Remote',
-      url: 'http://example.com',
+      position: 'Community Lead, Full Stack Development Instructor',
+      location: 'Cancun, MX / Remote',
+      fromTo: '2018 - 2021',
+      url: 'https://new.devf.la/en',
     },
     {
       id: 4,
       company: 'Internet Society',
-      position: 'Web Development Instructor',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
+      position: 'Community Networks, Internet of Things Program Coordinator',
       location: 'Mexico City, MX / Remote',
-      url: 'http://example.com',
+      fromTo: '2017 - 2020',
+      url: 'https://www.internetsociety.org',
     },
     {
       id: 5,
-      company: 'Tech Garage',
-      position: 'Innovation Manager',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
-      location: 'Cancún, MX',
-      url: 'http://example.com',
+      company: 'Tech Garage Technology Park',
+      position: 'Innovation Program Manager',
+      location: 'Cancun, MX',
+      fromTo: '2016 - 2018',
+      url: 'https://www.facebook.com/techgaragemx',
     },
     {
       id: 6,
       company: 'Microsoft Innovation Center',
-      position: 'Web Development Instructor',
-      description:
-        'Deliver Full Stack Development and Software Engineering topics',
-      location: 'Cancún, MX',
-      url: 'http://example.com',
+      position: 'Community Lead',
+      location: 'Cancun, MX',
+      fromTo: '2015 - 2016',
+      url: 'https://www.microsoft.com/en-us/mtc',
+    },
+    {
+      id: 7,
+      company:
+        'Mexican Chamber of Electronics, Telecommunications and Information Technologies (CANIETI)',
+      position: 'Events Coordinator',
+      location: 'Cancun, MX',
+      fromTo: '2015 - 2016',
+      url: 'http://www.canieti.org/Inicio/English/englishcan/about.aspx',
     },
   ];
 
@@ -145,19 +163,20 @@ function Experience() {
         title="Experience"
         description="Companies that have trusted my work"
       />
-      <main className="experience">
+      <main className="container">
         <ul className="experience-list">
           {data.map((e) => (
             <li key={e.id} className="experience-list-item">
               <h3>
-                {e.company}{' '}
-                <span className="experience-list-item-location">
-                  {e.location}
-                </span>
+                {e.company}
+                <div>
+                  <span>{e.location}</span>
+                  <span> | </span>
+                  <span>{e.fromTo}</span>
+                </div>{' '}
               </h3>
               <p>{e.position}</p>
-              <p>{e.description}</p>
-              <a href={e.url}>{e.url}</a>
+              <a href={e.url}>More information</a>
             </li>
           ))}
         </ul>
@@ -170,45 +189,59 @@ function Education() {
   const data = [
     {
       id: 1,
-      name: 'MIRAI Innovation',
-      description: 'Emergent Future Technologies',
+      institution: 'MIRAI Innovation',
+      achievement:
+        'Emergent Future Technologies Certificate (Neurotech, Biomedics, IoT, Data Science, AI/ML, AR/VR)',
+      location: 'Osaka, JP',
+      fromTo: '2023',
       url: 'http://example.com',
-      image: 'https://picsum.photos/300/200',
     },
     {
       id: 2,
-      name: 'DEV.F',
-      description: 'Master in Coding',
+      institution: 'DEV.F',
+      achievement:
+        'Master in Coding (Fullstack Development Javascript, Git, React, Express, MongoDB, Postgresql)',
+      location: 'Mexico City, MX',
+      fromTo: '2018 - 2019',
       url: 'http://example.com',
-      image: 'https://picsum.photos/300/200',
     },
     {
       id: 3,
-      name: 'TecniA Technology Park',
-      description: 'High Impact Entrepreneurship',
+      institution: 'TecniA Technology Park',
+      achievement:
+        'High Impact Entrepreneurship Certificate (Startup ecosystem, Agile methodology, Intellectual Property)',
+      location: 'Merida, MX',
+      fromTo: '2015 - 2016',
       url: 'http://example.com',
-      image: 'https://picsum.photos/300/200',
     },
     {
       id: 4,
-      name: 'National Technological Institute of Mexico',
-      description: 'Mechatronics Engineering',
+      institution: 'National Technological Institute of Mexico',
+      achievement:
+        'B.S. in Mechatronics Engineering (Mechanics, Electronics, Software, Control Engineering)',
+      location: 'Cancun, MX',
+      fromTo: '2011 - 2016',
       url: 'http://example.com',
-      image: 'https://picsum.photos/300/200',
     },
   ];
 
   return (
     <>
       <Header title="Education" description="Educational timeline" />
-      <main className="education">
+      <main className="container">
         <ul className="education-list">
           {data.map((e) => (
             <li key={e.id} className="education-list-item">
-              <h3>{e.company}</h3>
-              <h3>{e.location}</h3>
-              <p>{e.description}</p>
-              <a href={e.url}>{e.url}</a>
+              <h3>
+                {e.institution}
+                <div>
+                  <span>{e.location}</span>
+                  <span> | </span>
+                  <span>{e.fromTo}</span>
+                </div>{' '}
+              </h3>
+              <p>{e.achievement}</p>
+              <a href={e.url}>More information</a>
             </li>
           ))}
         </ul>
@@ -220,7 +253,7 @@ function Education() {
 function ProjectsListItem({ name, description, url, image }) {
   return (
     <li className="projects-list-item">
-      <img src={image} />
+      <img src={image} alt={image} />
       <div>
         <h3>{name}</h3>
         <p>{description}</p>
@@ -293,7 +326,7 @@ function Projects() {
   return (
     <>
       <Header title="Projects" description="Some projects I've worked around" />
-      <main className="projects">
+      <main className="container">
         <ul className="projects-list">
           {data.map((p) => (
             <ProjectsListItem key={p.id} {...p} />
@@ -307,7 +340,7 @@ function Projects() {
 function DevListItem({ name, description, url, image }) {
   return (
     <li className="dev-list-item">
-      <img src={image} />
+      <img src={image} alt={image} />
       <div>
         <h3>{name}</h3>
         <p>{description}</p>
@@ -425,7 +458,7 @@ function Dev() {
         title="Dev"
         description="Software development, coding and engineering stuff"
       />
-      <main className="dev">
+      <main className="container">
         <ul className="dev-list">
           {data.map((d) => (
             <DevListItem key={d.id} {...d} />
