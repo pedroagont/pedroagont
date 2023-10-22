@@ -103,9 +103,10 @@ li.dev-list-item div {
   margin-top: -15px;
 }
 
-.contact-links {
+ul.contact-links-list {
   display: flex;
   flex-direction: column;
+  margin-left: 2em;
 }
 
 .dev-list-item-links a {
