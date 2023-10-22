@@ -90,6 +90,10 @@ main.container {
   padding: 0 1em;
 }
 
+main.container a {
+  color: black;
+}
+
 ul.experience-list,
 ul.education-list {
   display: flex;
@@ -135,10 +139,27 @@ ul.contact-links-list {
   margin-left: 2em;
 }
 
-.dev-list-item-links a {
+.dev-list-item-links a,
+.home-cta a {
   padding: 0.3em;
   margin-right: 1em;
   text-decoration: none;
-  border: 1px solid black;
+  border: 0.5px solid black;
+  box-shadow: 1px 1px black;
   cursor: pointer;
+}
+
+.dev-list-item-links a:hover,
+.home-cta a:hover {
+  box-shadow: 2px 2px black;
+}
+.dev-list-item-links a:active,
+.home-cta a:active {
+  box-shadow: none;
+}
+
+.home-cta {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.2em;
 }
