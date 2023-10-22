@@ -10,7 +10,8 @@ nav.navbar {
   padding: 0 1em;
   height: 70px;
   width: 100vw;
-  background-color: midnightblue;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 1px black;
   text-shadow: 1px 1px 1px black;
 
   display: flex;
@@ -49,11 +50,11 @@ header.header {
   height: 50vh;
 }
 
-header h1 {
+header.header h1 {
   text-shadow: 1px 1px 1px grey;
 }
 
-header p {
+header.header p {
   text-decoration: underline;
 }
 
@@ -62,6 +63,32 @@ main.container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1em;
+}
+
+.home-img {
+  width: 300px;
+  margin: auto;
+
+  margin-top: 7em;
+}
+
+.home-img img {
+  width: 100%;
+}
+
+header.header-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header.header-home h1 {
+  text-shadow: 1px 1px 1px grey;
+}
+
+header.header-home h2 {
+  margin-top: -6px;
 }
 
 ul.experience-list,

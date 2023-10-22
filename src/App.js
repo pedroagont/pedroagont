@@ -10,7 +10,7 @@ import Projects from './pages/Projects';
 import Dev from './pages/Dev';
 import Contact from './pages/Contact';
 
-import './assets/styles/App.css';
+import './styles/App.css';
 
 function App() {
   return (

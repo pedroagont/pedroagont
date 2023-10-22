@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 
 function Home() {
   return (
     <>
-      <Header title="Home" description="Welcome" />
+      <div className="home-img">
+        <img src="/assets/images/home.jpg" alt="pedroagont" />
+      </div>
+      <header className="header-home">
+        <h1>Pedro A. González</h1>
+        <h2>Innovator</h2>
+      </header>
       <main className="container">
         <p>
           Pedro A. González is a mexican engineer and multi-faceted individual
