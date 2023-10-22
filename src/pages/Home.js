@@ -11,6 +11,7 @@ function Home() {
             options={{
               strings: [
                 'Tech Entrepreneur',
+                'Educator',
                 'Software Developer',
                 'Innovator',
                 'Mechatronics Engineer',
