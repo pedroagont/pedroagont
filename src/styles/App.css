@@ -8,7 +8,7 @@ body {
 
 nav.navbar {
   padding: 0 1em;
-  height: 10vh;
+  height: 70px;
   width: 100vw;
   background-color: midnightblue;
   text-shadow: 1px 1px 1px black;
@@ -57,8 +57,9 @@ header p {
   text-decoration: underline;
 }
 
-main {
+main.container {
   width: 90%;
+  max-width: 600px;
   margin: 0 auto;
   padding: 0 1em;
 }
@@ -82,14 +83,36 @@ li.projects-list-item,
 li.dev-list-item {
   border: 0.5px solid black;
   padding: 1em;
+  padding-bottom: 2em;
   margin: 1em 0.5em;
   box-shadow: 3px 3px black;
 
   display: flex;
+  align-items: center;
   gap: 2em;
 }
 
 li.projects-list-item img,
 li.dev-list-item img {
   width: 40%;
+}
+
+li.projects-list-item div,
+li.dev-list-item div {
+  width: 50%;
+  margin-top: -15px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-list-item-links a {
+  padding: 0.3em;
+  margin-right: 1em;
+  text-decoration: none;
+  border: 1px solid black;
+
+  cursor: pointer;
 }
