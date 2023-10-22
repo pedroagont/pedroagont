@@ -1,6 +1,9 @@
 import Header from '../components/Header';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Contact() {
+  useDocumentTitle('Pedro A. González - Contact');
+
   return (
     <>
       <Header title="Contact" description="Let's collaborate" />

@@ -1,6 +1,9 @@
 import Header from '../components/Header';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Education() {
+  useDocumentTitle('Pedro A. González - Education');
+
   const data = [
     {
       id: 1,

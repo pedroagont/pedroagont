@@ -1,6 +1,9 @@
 import Header from '../components/Header';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function About() {
+  useDocumentTitle('Pedro A. González - About');
+
   return (
     <>
       <Header title="About" description="A little bit about me" />

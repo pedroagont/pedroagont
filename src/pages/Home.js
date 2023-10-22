@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Home() {
+  useDocumentTitle('Pedro A. González');
+
   return (
     <>
       <header className="header">
@@ -31,7 +34,9 @@ function Home() {
           visionary leadership has brought positive change through innovation,
           education, and an unwavering passion for technology.
         </p>
-        <Link to="/about">See more</Link>
+        <div className="home-cta">
+          <Link to="/about">See more</Link>
+        </div>
       </main>
     </>
   );

@@ -1,7 +1,10 @@
 import Header from '../components/Header';
 import DevListItem from '../components/DevListItem';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Dev() {
+  useDocumentTitle('Pedro A. González - Dev');
+
   const data = [
     {
       id: 1,

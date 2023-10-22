@@ -1,6 +1,9 @@
 import Header from '../components/Header';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Experience() {
+  useDocumentTitle('Pedro A. González - Experience');
+
   const data = [
     {
       id: 1,
