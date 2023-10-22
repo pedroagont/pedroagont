@@ -54,6 +54,11 @@ header.header h1 {
   text-shadow: 1px 1px 1px grey;
 }
 
+header.header h2 {
+  text-shadow: 0.8px 0.8px 0.8px grey;
+  margin-top: -1px;
+}
+
 header.header p {
   text-decoration: underline;
 }
@@ -63,32 +68,6 @@ main.container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1em;
-}
-
-.home-img {
-  width: 300px;
-  margin: auto;
-
-  margin-top: 7em;
-}
-
-.home-img img {
-  width: 100%;
-}
-
-header.header-home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-header.header-home h1 {
-  text-shadow: 1px 1px 1px grey;
-}
-
-header.header-home h2 {
-  margin-top: -6px;
 }
 
 ul.experience-list,
@@ -141,6 +120,5 @@ ul.contact-links-list {
   margin-right: 1em;
   text-decoration: none;
   border: 1px solid black;
-
   cursor: pointer;
 }

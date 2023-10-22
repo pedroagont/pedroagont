@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">pedroagont</Link>
+        <Link to="/">@pedroagont</Link>
       </div>
       <ul className="navbar-menu">
         <li>

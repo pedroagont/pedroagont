@@ -1,14 +1,27 @@
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 
 function Home() {
   return (
     <>
-      <div className="home-img">
-        <img src="/assets/images/home.jpg" alt="pedroagont" />
-      </div>
-      <header className="header-home">
+      <header className="header">
         <h1>Pedro A. González</h1>
-        <h2>Innovator</h2>
+        <h2>
+          <Typewriter
+            options={{
+              strings: [
+                'Tech Entrepreneur',
+                'Software Developer',
+                'Innovator',
+                'Mechatronics Engineer',
+                'Digital Nomad',
+                'Skydiver',
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h2>
       </header>
       <main className="container">
         <p>

@@ -31,6 +31,24 @@ function Contact() {
           </li>
           <li>
             <a
+              href="https://linkedin.com/in/pedroagont"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/pedroagont"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
               href="https://instagram.com/pedroagont/"
               target="_blank"
               rel="noreferrer"
@@ -54,24 +72,6 @@ function Contact() {
               rel="noreferrer"
             >
               Reddit
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
             </a>
           </li>
         </ul>
