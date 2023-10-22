@@ -43,6 +43,23 @@ nav.navbar a {
   color: white;
 }
 
+nav .navbar-menu a {
+  text-decoration: none;
+  color: grey;
+}
+
+nav.navbar li:hover {
+  text-decoration: underline;
+}
+
+.menu-item-selected {
+  text-decoration: underline;
+}
+
+.menu-item-selected a {
+  color: white !important;
+}
+
 header.header {
   display: flex;
   flex-direction: column;
