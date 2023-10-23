@@ -1,82 +1,22 @@
 import Header from '../components/Header';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
-function Contact() {
-  useDocumentTitle('Pedro A. González - Contact');
+function Contact({ data }) {
+  useDocumentTitle(data.title);
 
   return (
     <>
-      <Header title="Contact" description="Let's collaborate" />
+      <Header title={data.title} description={data.description} />
       <main className="container">
-        <p>
-          For work, conferences, lectures, workshops, event invitation, media
-          inquiries, or any kind of collaboration, I'll be happy to answer from
-          the following channels:
-        </p>
+        <p>{data.content}</p>
         <ul className="contact-links-list">
-          <li>
-            <a
-              href="mailto:pgonzalez@post.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              pgonzalez@post.com
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com/pedroagont/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://facebook.com/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://reddit.com/user/pedroagont"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Reddit
-            </a>
-          </li>
+          {data.links.map((link) => (
+            <li key={link.name}>
+              <a href={link.url} target="_blank" rel="noreferrer">
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </main>
     </>

@@ -94,6 +94,10 @@ main.container a {
   color: black;
 }
 
+.about-content {
+  white-space: pre-line;
+}
+
 ul.experience-list,
 ul.education-list {
   display: flex;

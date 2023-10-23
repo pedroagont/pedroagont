@@ -12,18 +12,29 @@ import Contact from './pages/Contact';
 
 import './styles/App.css';
 
+import data from './data';
+
 function App() {
   return (
     <BrowserRouter>
-      <Navigation />
+      <Navigation data={data.navigationData} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/dev" element={<Dev />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home data={data.homeData} />} />
+        <Route path="/about" element={<About data={data.aboutData} />} />
+        <Route
+          path="/experience"
+          element={<Experience data={data.experienceData} />}
+        />
+        <Route
+          path="/education"
+          element={<Education data={data.educationData} />}
+        />
+        <Route
+          path="/projects"
+          element={<Projects data={data.projectsData} />}
+        />
+        <Route path="/dev" element={<Dev data={data.devData} />} />
+        <Route path="/contact" element={<Contact data={data.contactData} />} />
       </Routes>
     </BrowserRouter>
   );
