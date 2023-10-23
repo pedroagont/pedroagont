@@ -65,9 +65,13 @@ header.header {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 40vh;
+  height: 55vh;
   margin-bottom: 5em;
+  padding-bottom: 1.5em;
   font-family: 'Montserrat', sans-serif;
+
+  background-size: cover;
+  background-position: center;
 }
 
 header.header h1 {

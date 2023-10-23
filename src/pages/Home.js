@@ -7,7 +7,10 @@ function Home({ data }) {
 
   return (
     <>
-      <header className="header">
+      <header
+        className="header"
+        style={{ backgroundImage: `url('/images/header.jpg')` }}
+      >
         <h1>{data.title}</h1>
         <h2>
           <Typewriter
