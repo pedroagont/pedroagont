@@ -7,7 +7,11 @@ function Dev({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <ul className="dev-list">
           {data.content.map((d) => (

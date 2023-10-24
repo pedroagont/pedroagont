@@ -9,7 +9,7 @@ function Home({ data }) {
     <>
       <header
         className="header"
-        style={{ backgroundImage: `url('/images/header.jpg')` }}
+        style={{ backgroundImage: `url(${data.backgroundImg})` }}
       >
         <h1>{data.title}</h1>
         <h2>

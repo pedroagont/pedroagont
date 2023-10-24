@@ -6,7 +6,11 @@ function Education({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <ul className="education-list">
           {data.content.map((e) => (

@@ -6,7 +6,11 @@ function Experience({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <ul className="experience-list">
           {data.content.map((e) => (

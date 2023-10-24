@@ -6,7 +6,11 @@ function Contact({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <p>{data.content}</p>
         <ul className="contact-links-list">

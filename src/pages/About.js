@@ -6,7 +6,11 @@ function About({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <p className="about-content">{data.content}</p>
       </main>

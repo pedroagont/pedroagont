@@ -7,7 +7,11 @@ function Projects({ data }) {
 
   return (
     <>
-      <Header title={data.title} description={data.description} />
+      <Header
+        title={data.title}
+        description={data.description}
+        backgroundImg={data.backgroundImg}
+      />
       <main className="container">
         <ul className="projects-list">
           {data.content.map((p) => (
