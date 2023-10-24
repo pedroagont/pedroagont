@@ -28,9 +28,22 @@ nav .navbar-brand {
   font-weight: bold;
 }
 
-nav .navbar-menu {
-  list-style-type: none;
+nav .navbar-button {
+  display: none;
+  color: grey;
+}
+
+nav .navbar-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+nav .navbar-collapse {
   width: 70%;
+}
+
+nav .navbar-collapse-menu {
+  list-style-type: none;
   font-size: 0.8em;
 
   display: flex;
@@ -43,7 +56,7 @@ nav.navbar a {
   color: white;
 }
 
-nav .navbar-menu a {
+nav .navbar-collapse-menu a {
   text-decoration: none;
   color: grey;
 }
@@ -65,7 +78,8 @@ header.header {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 55vh;
+
+  height: 70vh;
   margin-bottom: 5em;
   padding-bottom: 1.5em;
   font-family: 'Montserrat', sans-serif;
@@ -170,4 +184,43 @@ ul.contact-links-list {
   margin-top: 2em;
   text-align: center;
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 570px) {
+  nav.navbar {
+    height: fit-content;
+    min-height: 60px;
+  }
+
+  nav .navbar-collapse {
+    display: none;
+    width: 25%;
+    margin-right: 4.5em;
+  }
+
+  nav .navbar-collapse-menu {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav .navbar-button {
+    display: block;
+    margin-right: 4.5em;
+  }
+
+  li.projects-list-item,
+  li.dev-list-item {
+    flex-direction: column;
+  }
+
+  li.projects-list-item div,
+  li.dev-list-item div {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  li.projects-list-item img,
+  li.dev-list-item img {
+    width: 90%;
+  }
 }
