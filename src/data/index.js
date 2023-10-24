@@ -180,7 +180,7 @@ const data = {
         description:
           'Nonprofit organization with the mission to connect remote communities with Internet access and tech-driven education.',
         url: 'https://kaanbal.org',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/kaanbal.jpg',
       },
       {
         id: 2,
@@ -188,7 +188,7 @@ const data = {
         description:
           'Youth empowerment initiative with the World Economic Foum to promote citizenship and social impact.',
         url: 'https://globalshaperscancun.org',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/globalshapers.jpg',
       },
       {
         id: 3,
@@ -196,7 +196,7 @@ const data = {
         description:
           'Digital marketing agency delivering web development, branding and graphic design.',
         url: 'https://neonwave.mx',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/neonwave.jpg',
       },
       {
         id: 4,
@@ -204,7 +204,7 @@ const data = {
         description:
           'Delivery people platform for your business at the tip of your fingers.',
         url: 'https://www.turepa.mx',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/turepa.jpg',
       },
       {
         id: 5,
@@ -212,7 +212,7 @@ const data = {
         description:
           'Educational content to promote science and technology to a 4 million followers community',
         url: 'https://facebook.com/tucerebrodigital',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/cerebrodigital.jpg',
       },
       {
         id: 6,
@@ -220,7 +220,7 @@ const data = {
         description:
           'A singular AI platform to prompt questions, images, music, video and code.',
         url: 'https://singulary.ai',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/singulary.jpg',
       },
       {
         id: 7,
@@ -228,7 +228,7 @@ const data = {
         description:
           'Global search engine for purchasing flights, hotels, tours and car rentals.',
         url: 'https://ticketflyers.com',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/ticketflyers.jpg',
       },
       {
         id: 8,
@@ -236,7 +236,7 @@ const data = {
         description:
           'Simple tap game to stack endless hours of fun, available on Android and iOS',
         url: 'https://play.google.com/store/apps/details?id=com.game.bouncingbob.play',
-        image: 'https://picsum.photos/300/200',
+        image: './images/projects/bouncingbob.jpg',
       },
     ],
   },
@@ -252,7 +252,7 @@ const data = {
         description: 'Remote controlled robots to livestream video.',
         url: 'https://pedroagont.tumblr.com/post/137541587893#137541587893',
         repository: 'https://github.com/pedroagont/py-carosc',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/raspberrypi.jpg',
       },
       {
         id: 2,
@@ -260,7 +260,7 @@ const data = {
         description: 'Gif searcher using the Giphy SDK and API.',
         url: 'https://react-cool-gifs.netlify.app',
         repository: 'https://github.com/pedroagont/react-cool-gifs',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/reactgifs.jpg',
       },
       {
         id: 3,
@@ -269,7 +269,7 @@ const data = {
           'Experiment using 3d modeling and browser events with ThreeJS',
         url: 'https://react-three-js.netlify.app',
         repository: 'https://github.com/pedroagont/react-three-js',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/reactthreejs.jpg',
       },
       {
         id: 4,
@@ -278,7 +278,7 @@ const data = {
         url: 'https://react-bootstrap-g7.netlify.app',
         repository:
           'https://github.com/pedroagont/master-code-g7/blob/master/05_Frontend/07_react-bootstrap',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/reactbootstrap.jpg',
       },
       {
         id: 5,
@@ -286,7 +286,7 @@ const data = {
         description: 'Create a fun avatar image and download it.',
         url: 'https://pedroagont.github.io/mochi-maker/',
         repository: 'https://github.com/pedroagont/mochi-maker',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/mochimaker.jpg',
       },
       {
         id: 6,
@@ -294,7 +294,7 @@ const data = {
         description: 'Search images on NASA archive using the NASA API.',
         url: 'https://pedroagont.github.io/steam-fair-conference-8apr',
         repository: 'https://github.com/pedroagont/steam-fair-conference-8apr',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/nasa.jpg',
       },
       {
         id: 7,
@@ -302,7 +302,7 @@ const data = {
         description: 'Select a range of CSS colors using this fun tool.',
         url: 'https://pedroagont.github.io/The-Flicker',
         repository: 'https://github.com/pedroagont/The-Flicker',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/flicker.jpg',
       },
       {
         id: 8,
@@ -311,7 +311,7 @@ const data = {
           'Identify plants pictures uploaded by users using AI and learn from it.',
         url: 'http://herbiview.onrender.com',
         repository: 'https://github.com/pedroagont/herbiview',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/herbiview.jpg',
       },
       {
         id: 9,
@@ -321,7 +321,7 @@ const data = {
         url: 'https://shopify-technical-assignment.vercel.app',
         repository:
           'https://github.com/amyleblanc/shopify-technical-assignment',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/shopify.jpg',
       },
       {
         id: 10,
@@ -330,7 +330,7 @@ const data = {
           'Awesome and simple matching card game using Pokemon characters.',
         url: 'https://norbjz.github.io/memorama-pokemon',
         repository: 'https://github.com/Norbjz/memorama-pokemon',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/pokemonmatch.jpg',
       },
       {
         id: 11,
@@ -339,7 +339,7 @@ const data = {
           'Survey to evaluate violence during International Women Day.',
         url: 'https://mo0sh.github.io/violentometro',
         repository: 'https://github.com/mo0sh/violentometro',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/womenviolencemeter.jpg',
       },
       {
         id: 12,
@@ -348,7 +348,7 @@ const data = {
           'Collaborative dashboard that integrates a range of tools like pomodoro timer and video calls to stay on track.',
         url: 'https://studeecloud.onrender.com',
         repository: 'https://github.com/pedroagont/studeecloud',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/studeecloud.jpg',
       },
       {
         id: 13,
@@ -357,7 +357,7 @@ const data = {
           'E-commerce website to browse through a collection of shoes where you can filter the search based on style, color and price.',
         url: 'https://shoe-box.netlify.app',
         repository: 'https://github.com/FarzanehSa/shoeBox-client',
-        image: 'https://picsum.photos/300/200',
+        image: './images/dev/shoebox.jpg',
       },
     ],
   },
