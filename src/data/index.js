@@ -34,6 +34,7 @@ const data = {
     title: 'Pedro A. González',
     description: [
       'Tech Entrepreneur',
+      'Speaker',
       'Educator',
       'Software Developer',
       'Innovator',
