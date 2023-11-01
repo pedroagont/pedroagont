@@ -53,7 +53,7 @@ const data = {
     backgroundImg: './images/header/about.jpg',
     content: `Pedro A. González is a lifelong enthusiast of digital development and innovation with the mission of making technology accesible and impactful.\n
         He is the co-founder of Kaanbal.org, a non profit organization focused on connecting remote communities with Internet access and tech-driven education.\n
-        González currently leads as a full time mentor and instructor teaching software development skills to students from Latin America, Canada and all around the world.\n
+        González currently leads as a full time mentor and instructor teaching software development skills to people of all ages from Latin America, Canada and all around the world.\n
         His journey as an innovator and tech entrepreneur have contributed significantly to boost the knowledge-based ecosystem and bridge the digital divide, positively impacting the lives of thousands.\n
         With a background in Mechatronics Engineering, a Master in Coding and a specialization in Entrepreneurship and Future Tech, Mr. González is a high end professional in the field of technology.\n
         His passion on the topic has led him to receive awards like the "Youth2030 Innovation for Transformation" from the Mexican Government and UN, as well as to participate as an international guest speaker, lecturer and presenter in dozens of events around Canada, United States, Mexico, Argentina, Germany and Japan, which features invitations from prestigious institutions such as Harvard, the MIT Media Lab and the United Nations.\n
