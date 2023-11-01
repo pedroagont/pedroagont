@@ -42,7 +42,7 @@ const data = {
       'Digital Nomad',
       'Skydiver',
     ],
-    backgroundImg: './images/header/home.jpg',
+    backgroundImg: '/images/header/home.jpg',
     content:
       'Pedro A. González is a mexican tech entrepreneur and multi-faceted individual with a track record of making technology accessible and impactful. His visionary leadership has brought positive change through innovation, education, and an unwavering passion for technology.',
   },
@@ -50,7 +50,7 @@ const data = {
   aboutData: {
     title: 'About',
     description: 'A little bit about me',
-    backgroundImg: './images/header/about.jpg',
+    backgroundImg: '/images/header/about.jpg',
     content: `Pedro A. González is a lifelong enthusiast of digital development and innovation with the mission of making technology accesible and impactful.\n
         He is the co-founder of Kaanbal.org, a non profit organization focused on connecting remote communities with Internet access and tech-driven education.\n
         González currently leads as a full time mentor and instructor teaching software development skills to people of all ages from Latin America, Canada and all around the world.\n
@@ -63,7 +63,7 @@ const data = {
   experienceData: {
     title: 'Experience',
     description: 'Professional background',
-    backgroundImg: './images/header/experience.jpg',
+    backgroundImg: '/images/header/experience.jpg',
     content: [
       {
         id: 1,
@@ -129,7 +129,7 @@ const data = {
   educationData: {
     title: 'Education',
     description: 'Academic timeline',
-    backgroundImg: './images/header/education.jpg',
+    backgroundImg: '/images/header/education.jpg',
     content: [
       {
         id: 1,
@@ -173,7 +173,7 @@ const data = {
   projectsData: {
     title: 'Projects',
     description: "Some projects I've worked around",
-    backgroundImg: './images/header/projects.jpg',
+    backgroundImg: '/images/header/projects.jpg',
     content: [
       {
         id: 1,
@@ -181,7 +181,7 @@ const data = {
         description:
           'Nonprofit organization with the mission to connect remote communities with Internet access and tech-driven education.',
         url: 'https://kaanbal.org',
-        image: './images/projects/kaanbal.jpg',
+        image: '/images/projects/kaanbal.jpg',
       },
       {
         id: 2,
@@ -189,7 +189,7 @@ const data = {
         description:
           'Youth empowerment initiative with the World Economic Foum to promote citizenship and social impact.',
         url: 'https://globalshaperscancun.org',
-        image: './images/projects/globalshapers.jpg',
+        image: '/images/projects/globalshapers.jpg',
       },
       {
         id: 3,
@@ -197,7 +197,7 @@ const data = {
         description:
           'Digital marketing agency delivering web development, branding and graphic design.',
         url: 'https://neonwave.mx',
-        image: './images/projects/neonwave.jpg',
+        image: '/images/projects/neonwave.jpg',
       },
       {
         id: 4,
@@ -205,7 +205,7 @@ const data = {
         description:
           'Delivery people platform for your business at the tip of your fingers.',
         url: 'https://www.turepa.mx',
-        image: './images/projects/turepa.jpg',
+        image: '/images/projects/turepa.jpg',
       },
       {
         id: 5,
@@ -213,7 +213,7 @@ const data = {
         description:
           'Educational content to promote science and technology to a 4 million followers community',
         url: 'https://facebook.com/tucerebrodigital',
-        image: './images/projects/cerebrodigital.jpg',
+        image: '/images/projects/cerebrodigital.jpg',
       },
       {
         id: 6,
@@ -221,7 +221,7 @@ const data = {
         description:
           'A singular AI platform to prompt questions, images, music, video and code.',
         url: 'https://singulary.ai',
-        image: './images/projects/singulary.jpg',
+        image: '/images/projects/singulary.jpg',
       },
       {
         id: 7,
@@ -229,7 +229,7 @@ const data = {
         description:
           'Global search engine for purchasing flights, hotels, tours and car rentals.',
         url: 'https://ticketflyers.com',
-        image: './images/projects/ticketflyers.jpg',
+        image: '/images/projects/ticketflyers.jpg',
       },
       {
         id: 8,
@@ -237,7 +237,7 @@ const data = {
         description:
           'Simple tap game to stack endless hours of fun, available on Android and iOS',
         url: 'https://play.google.com/store/apps/details?id=com.game.bouncingbob.play',
-        image: './images/projects/bouncingbob.jpg',
+        image: '/images/projects/bouncingbob.jpg',
       },
     ],
   },
@@ -245,7 +245,7 @@ const data = {
   devData: {
     title: 'Dev',
     description: 'Coding and engineering stuff',
-    backgroundImg: './images/header/dev.jpg',
+    backgroundImg: '/images/header/dev.jpg',
     content: [
       {
         id: 1,
@@ -253,7 +253,7 @@ const data = {
         description: 'Remote controlled robots to livestream video.',
         url: 'https://pedroagont.tumblr.com/post/137541587893#137541587893',
         repository: 'https://github.com/pedroagont/py-carosc',
-        image: './images/dev/raspberrypi.jpg',
+        image: '/images/dev/raspberrypi.jpg',
       },
       {
         id: 2,
@@ -261,7 +261,7 @@ const data = {
         description: 'Gif searcher using the Giphy SDK and API.',
         url: 'https://react-cool-gifs.netlify.app',
         repository: 'https://github.com/pedroagont/react-cool-gifs',
-        image: './images/dev/reactgifs.jpg',
+        image: '/images/dev/reactgifs.jpg',
       },
       {
         id: 3,
@@ -270,7 +270,7 @@ const data = {
           'Experiment using 3d modeling and browser events with ThreeJS',
         url: 'https://react-three-js.netlify.app',
         repository: 'https://github.com/pedroagont/react-three-js',
-        image: './images/dev/reactthreejs.jpg',
+        image: '/images/dev/reactthreejs.jpg',
       },
       {
         id: 4,
@@ -279,7 +279,7 @@ const data = {
         url: 'https://react-bootstrap-g7.netlify.app',
         repository:
           'https://github.com/pedroagont/master-code-g7/blob/master/05_Frontend/07_react-bootstrap',
-        image: './images/dev/reactbootstrap.jpg',
+        image: '/images/dev/reactbootstrap.jpg',
       },
       {
         id: 5,
@@ -287,7 +287,7 @@ const data = {
         description: 'Create a fun avatar image and download it.',
         url: 'https://pedroagont.github.io/mochi-maker/',
         repository: 'https://github.com/pedroagont/mochi-maker',
-        image: './images/dev/mochimaker.jpg',
+        image: '/images/dev/mochimaker.jpg',
       },
       {
         id: 6,
@@ -295,7 +295,7 @@ const data = {
         description: 'Search images on NASA archive using the NASA API.',
         url: 'https://pedroagont.github.io/steam-fair-conference-8apr',
         repository: 'https://github.com/pedroagont/steam-fair-conference-8apr',
-        image: './images/dev/nasa.jpg',
+        image: '/images/dev/nasa.jpg',
       },
       {
         id: 7,
@@ -303,7 +303,7 @@ const data = {
         description: 'Select a range of CSS colors using this fun tool.',
         url: 'https://pedroagont.github.io/The-Flicker',
         repository: 'https://github.com/pedroagont/The-Flicker',
-        image: './images/dev/flicker.jpg',
+        image: '/images/dev/flicker.jpg',
       },
       {
         id: 8,
@@ -312,7 +312,7 @@ const data = {
           'Identify plants pictures uploaded by users using AI and learn from it.',
         url: 'http://herbiview.onrender.com',
         repository: 'https://github.com/pedroagont/herbiview',
-        image: './images/dev/herbiview.jpg',
+        image: '/images/dev/herbiview.jpg',
       },
       {
         id: 9,
@@ -322,7 +322,7 @@ const data = {
         url: 'https://shopify-technical-assignment.vercel.app',
         repository:
           'https://github.com/amyleblanc/shopify-technical-assignment',
-        image: './images/dev/shopify.jpg',
+        image: '/images/dev/shopify.jpg',
       },
       {
         id: 10,
@@ -331,7 +331,7 @@ const data = {
           'Awesome and simple matching card game using Pokemon characters.',
         url: 'https://norbjz.github.io/memorama-pokemon',
         repository: 'https://github.com/Norbjz/memorama-pokemon',
-        image: './images/dev/pokemonmatch.jpg',
+        image: '/images/dev/pokemonmatch.jpg',
       },
       {
         id: 11,
@@ -340,7 +340,7 @@ const data = {
           'Survey to evaluate violence during International Women Day.',
         url: 'https://mo0sh.github.io/violentometro',
         repository: 'https://github.com/mo0sh/violentometro',
-        image: './images/dev/womenviolencemeter.jpg',
+        image: '/images/dev/womenviolencemeter.jpg',
       },
       {
         id: 12,
@@ -349,7 +349,7 @@ const data = {
           'Collaborative dashboard that integrates a range of tools like pomodoro timer and video calls to stay on track.',
         url: 'https://studeecloud.onrender.com',
         repository: 'https://github.com/pedroagont/studeecloud',
-        image: './images/dev/studeecloud.jpg',
+        image: '/images/dev/studeecloud.jpg',
       },
       {
         id: 13,
@@ -358,7 +358,7 @@ const data = {
           'E-commerce website to browse through a collection of shoes where you can filter the search based on style, color and price.',
         url: 'https://shoe-box.netlify.app',
         repository: 'https://github.com/FarzanehSa/shoeBox-client',
-        image: './images/dev/shoebox.jpg',
+        image: '/images/dev/shoebox.jpg',
       },
     ],
   },
@@ -366,7 +366,7 @@ const data = {
   contactData: {
     title: 'Contact',
     description: "Let's collaborate",
-    backgroundImg: './images/header/contact.jpg',
+    backgroundImg: '/images/header/contact.jpg',
     content:
       "For work, conferences, lectures, workshops, event invitation, media inquiries, or any kind of collaboration, I'll be happy to answer from the following channels:",
     links: [

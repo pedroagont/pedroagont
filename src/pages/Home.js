@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+import useDocumentMetaTags from '../hooks/useDocumentMetaTags';
 
 function Home({ data }) {
-  useDocumentTitle(data.title);
+  const location = useLocation();
+  useDocumentMetaTags(data.title, location.pathname);
 
   return (
     <>

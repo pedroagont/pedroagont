@@ -1,8 +1,10 @@
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+import useDocumentMetaTags from '../hooks/useDocumentMetaTags';
 
 function Education({ data }) {
-  useDocumentTitle(data.title);
+  const location = useLocation();
+  useDocumentMetaTags(data.title, location.pathname);
 
   return (
     <>

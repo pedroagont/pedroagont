@@ -1,9 +1,11 @@
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import DevListItem from '../components/DevListItem';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+import useDocumentMetaTags from '../hooks/useDocumentMetaTags';
 
 function Dev({ data }) {
-  useDocumentTitle(data.title);
+  const location = useLocation();
+  useDocumentMetaTags(data.title, location.pathname);
 
   return (
     <>
