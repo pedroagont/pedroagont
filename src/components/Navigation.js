@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 function Navigation({ data }) {
   const [collapse, setCollapse] = useState(window.innerWidth < 570);
@@ -27,7 +29,7 @@ function Navigation({ data }) {
         <Link to="/">@pedroagont</Link>
       </div>
       <div className="navbar-button" onClick={handleClickToggleMenu}>
-        <i className="fa-solid fa-bars"></i>
+        <FontAwesomeIcon icon={faCode} />
       </div>
       <div
         className="navbar-collapse"
