@@ -1,6 +1,6 @@
 ### Hi there! <a href="https://pedroagont.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
-- I'm a mechatronics engineer, full stack developer and tech entrepreneur with 8+ years of experience making technology accessible and impactful.
+- I'm a mechatronics engineer, full stack developer and tech entrepreneur with 9+ years of experience making technology accessible and impactful.
 - I consider myself very passionate about innovation, education and technology as a medium to solve problems and boost a knowledge-driven society.
 
 ### Connect with me
