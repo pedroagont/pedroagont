@@ -25,10 +25,6 @@ I'm also the co-founder of [**Kaanbal.org**](https://kaanbal.org), an educationa
 💬 Open to freelance work, consulting, or tech collaboration  
 📬 **Email**: pgonzalez@post.com
 
----
-
-### 🌐 Links
-
 <p align="left">
 <a href="https://linkedin.com/in/pedroagont" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
 <a href="https://instagram.com/pedroagont" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
