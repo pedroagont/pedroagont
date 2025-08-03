@@ -1,10 +1,10 @@
 ### Hi there, I'm Pedro! <a href="https://linkedin.com/in/pedroagont/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
 
-I’m a **Mechatronics Engineer** and **Full Stack Developer** with 9+ years of experience building scalable web platforms, MVPs, and automation systems.
+I’m a **Mechatronics Engineer** and **Full Stack Developer** with 9+ years of experience building scalable, elegant, and reliable web solutions.
 
-I focus on delivering complete end-to-end solutions — from **brand identity** and **UI/UX** to **backend architecture**, **SEO**, and **performance optimization** — for personal brands, SaaS products, nonprofits, and small businesses.
+I specialize in helping creators, small businesses, nonprofits, and startups launch complete digital platforms — from brand identity and custom websites to backend infrastructure, SEO, and performance optimization.
 
-I'm also the co-founder of [**Kaanbal.org**](https://kaanbal.org), where we’ve deployed **offline-first EdTech hubs** in 30+ underserved rural communities across Mexico.
+I'm also the co-founder of [**Kaanbal.org**](https://kaanbal.org), an educational tech initiative that’s brought internet connectivity and educational technology to over 30 underserved rural communities in Mexico — recognized by the UN, MIT Media Lab, and World Economic Forum. 
 
 ---
 
