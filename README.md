@@ -22,6 +22,3 @@ Beyond my professional life, I’m a chess player, runner, skydiver, and lifelon
 **DevOps**: Bash scripting, CI/CD, GitHub Actions, DigitalOcean, hosting & domain setup  
 **CMS**: WordPress, Shopify, Squarespace  
 **IoT**: Arduino, Raspberry Pi, ESP8266, ESP32, M5
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pedroagont&layout=compact)
-
