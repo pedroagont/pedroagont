@@ -199,6 +199,82 @@
             font-weight: 300;
         }
 
+        /* Project Cards */
+        .related-projects {
+            margin-top: 48px;
+        }
+
+        .related-projects h3 {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-name {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .project-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .project-link {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--text-primary);
+        }
+
         .footer {
             position: fixed;
             bottom: 0;
@@ -281,7 +357,7 @@
             <div class="portrait-container">
                 <div class="portrait"><img src="./portrait.jpg" alt=""></div>
                 <div class="name">
-                    <h1>Pedro González</h1>
+                    <h1>Pedro A. González</h1>
                     <p>Cancún, Mexico</p>
                 </div>
             </div>
@@ -306,6 +382,10 @@
                 <div class="response-content" id="responseContent">
                     <div class="response-title" id="responseTitle"></div>
                     <div class="response-text" id="responseText"></div>
+                    <div class="related-projects" id="relatedProjects" style="display: none;">
+                        <h3 id="projectsTitle"></h3>
+                        <div class="projects-grid" id="projectsGrid"></div>
+                    </div>
                     <div class="explore-more" id="exploreMore" style="display: none;">
                         Would you like to explore something else?
                     </div>
@@ -315,12 +395,229 @@
     </div>
     
     <div class="footer">
-        <a href="mailto:pedro@example.com">Email</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="mailto:pgonzalez@post.com">Email</a>
+        <a href="https://linkedin.com/in/pedroagont" target="_blank">LinkedIn</a>
+        <a href="https://github.com/pedroagont" target="_blank">GitHub</a>
     </div>
 
     <script>
+        const projects = {
+            en: {
+                title: "Related Projects",
+                projectsByQuestion: [
+                    // Question 0: What drives your work in technology?
+                    [
+                        {
+                            name: "Kaanbal",
+                            description: "Community-owned internet infrastructure for rural Mayan communities in Mexico",
+                            icon: "🌐",
+                            link: "https://kaanbal.org"
+                        },
+                        {
+                            name: "Rural Connectivity Initiative",
+                            description: "Strategic framework for sustainable telecommunications in underserved regions",
+                            icon: "📡",
+                            link: "#"
+                        }
+                    ],
+                    // Question 1: Tell me about a project you're most proud of
+                    [
+                        {
+                            name: "Kaanbal",
+                            description: "Community-owned internet infrastructure for rural Mayan communities in Mexico",
+                            icon: "🌐",
+                            link: "https://kaanbal.org"
+                        },
+                        {
+                            name: "IEEE Standards Work",
+                            description: "Contributing to global standards for community networks and connectivity",
+                            icon: "📋",
+                            link: "#"
+                        },
+                        {
+                            name: "Internet Society Chapter",
+                            description: "Building capacity for local internet governance and infrastructure",
+                            icon: "🌍",
+                            link: "#"
+                        }
+                    ],
+                    // Question 2: How do you approach building teams?
+                    [
+                        {
+                            name: "University Teaching",
+                            description: "Educating next-generation engineers in systems thinking and platform architecture",
+                            icon: "🎓",
+                            link: "#"
+                        },
+                        {
+                            name: "Startup Foundations",
+                            description: "Building and scaling technology ventures across AI, healthcare, and travel sectors",
+                            icon: "🚀",
+                            link: "#"
+                        }
+                    ],
+                    // Question 3: What's your perspective on AI?
+                    [
+                        {
+                            name: "Healthcare AI Platform",
+                            description: "Machine learning systems for patient care optimization and medical decision support",
+                            icon: "🏥",
+                            link: "#"
+                        },
+                        {
+                            name: "Customer Intelligence Suite",
+                            description: "AI-powered analytics for understanding user behavior and business insights",
+                            icon: "📊",
+                            link: "#"
+                        },
+                        {
+                            name: "Automation Framework",
+                            description: "Intelligent systems for workflow optimization and operational efficiency",
+                            icon: "⚙️",
+                            link: "#"
+                        }
+                    ],
+                    // Question 4: What are you looking for?
+                    [
+                        {
+                            name: "WEF Engagement",
+                            description: "Contributing to World Economic Forum initiatives on technology and society",
+                            icon: "🌐",
+                            link: "#"
+                        },
+                        {
+                            name: "Salzburg Global",
+                            description: "Fellow working on cross-border challenges in technology and governance",
+                            icon: "🎯",
+                            link: "#"
+                        }
+                    ],
+                    // Question 5: What do you do outside of technology?
+                    [
+                        {
+                            name: "Speaking Engagements",
+                            description: "Harvard, MIT Media Lab, UN — sharing perspectives on technology and equity",
+                            icon: "🎤",
+                            link: "#"
+                        },
+                        {
+                            name: "Global Travel",
+                            description: "Understanding how technology intersects with culture across continents",
+                            icon: "✈️",
+                            link: "#"
+                        }
+                    ]
+                ]
+            },
+            es: {
+                title: "Proyectos Relacionados",
+                projectsByQuestion: [
+                    // Question 0: ¿Qué impulsa tu trabajo?
+                    [
+                        {
+                            name: "Kaanbal",
+                            description: "Infraestructura de internet comunitaria para comunidades mayas rurales en México",
+                            icon: "🌐",
+                            link: "https://kaanbal.org"
+                        },
+                        {
+                            name: "Iniciativa de Conectividad Rural",
+                            description: "Marco estratégico para telecomunicaciones sustentables en regiones desatendidas",
+                            icon: "📡",
+                            link: "#"
+                        }
+                    ],
+                    // Question 1: Cuéntame sobre un proyecto
+                    [
+                        {
+                            name: "Kaanbal",
+                            description: "Infraestructura de internet comunitaria para comunidades mayas rurales en México",
+                            icon: "🌐",
+                            link: "https://kaanbal.org"
+                        },
+                        {
+                            name: "Trabajo en Estándares IEEE",
+                            description: "Contribuyendo a estándares globales para redes comunitarias y conectividad",
+                            icon: "📋",
+                            link: "#"
+                        },
+                        {
+                            name: "Capítulo Internet Society",
+                            description: "Construyendo capacidad para gobernanza local de internet e infraestructura",
+                            icon: "🌍",
+                            link: "#"
+                        }
+                    ],
+                    // Question 2: ¿Cómo construyes equipos?
+                    [
+                        {
+                            name: "Docencia Universitaria",
+                            description: "Educando a la próxima generación de ingenieros en pensamiento sistémico y arquitectura",
+                            icon: "🎓",
+                            link: "#"
+                        },
+                        {
+                            name: "Fundaciones de Startups",
+                            description: "Construyendo y escalando emprendimientos tecnológicos en IA, salud y viajes",
+                            icon: "🚀",
+                            link: "#"
+                        }
+                    ],
+                    // Question 3: Perspectiva sobre IA
+                    [
+                        {
+                            name: "Plataforma de IA en Salud",
+                            description: "Sistemas de aprendizaje automático para optimización de cuidado y soporte médico",
+                            icon: "🏥",
+                            link: "#"
+                        },
+                        {
+                            name: "Suite de Inteligencia de Clientes",
+                            description: "Analítica impulsada por IA para entender comportamiento de usuarios e insights",
+                            icon: "📊",
+                            link: "#"
+                        },
+                        {
+                            name: "Framework de Automatización",
+                            description: "Sistemas inteligentes para optimización de flujos de trabajo y eficiencia operativa",
+                            icon: "⚙️",
+                            link: "#"
+                        }
+                    ],
+                    // Question 4: ¿Qué buscas?
+                    [
+                        {
+                            name: "Participación WEF",
+                            description: "Contribuyendo a iniciativas del Foro Económico Mundial en tecnología y sociedad",
+                            icon: "🌐",
+                            link: "#"
+                        },
+                        {
+                            name: "Salzburg Global",
+                            description: "Fellow trabajando en desafíos transfronterizos en tecnología y gobernanza",
+                            icon: "🎯",
+                            link: "#"
+                        }
+                    ],
+                    // Question 5: ¿Qué haces fuera de tecnología?
+                    [
+                        {
+                            name: "Conferencias",
+                            description: "Harvard, MIT Media Lab, ONU — compartiendo perspectivas sobre tecnología y equidad",
+                            icon: "🎤",
+                            link: "#"
+                        },
+                        {
+                            name: "Viajes Globales",
+                            description: "Entendiendo cómo la tecnología intersecta con la cultura en continentes",
+                            icon: "✈️",
+                            link: "#"
+                        }
+                    ]
+                ]
+            }
+        };
+
         const content = {
             en: {
                 greeting: "Hello. What would you like to know?",
@@ -409,6 +706,9 @@
             const responseTitle = document.getElementById('responseTitle');
             const responseText = document.getElementById('responseText');
             const exploreMore = document.getElementById('exploreMore');
+            const relatedProjects = document.getElementById('relatedProjects');
+            const projectsTitle = document.getElementById('projectsTitle');
+            const projectsGrid = document.getElementById('projectsGrid');
             
             // Remove active state from all questions
             document.querySelectorAll('.question-item').forEach(q => q.classList.remove('active'));
@@ -422,6 +722,39 @@
             setTimeout(() => {
                 responseTitle.textContent = item.q;
                 responseText.innerHTML = `<p>${item.a}</p>`;
+                
+                // Show related projects
+                const relatedProjectsList = projects[currentLang].projectsByQuestion[index];
+                if (relatedProjectsList && relatedProjectsList.length > 0) {
+                    projectsTitle.textContent = projects[currentLang].title;
+                    projectsGrid.innerHTML = '';
+                    
+                    relatedProjectsList.forEach(project => {
+                        const card = document.createElement('div');
+                        card.className = 'project-card';
+                        card.onclick = () => {
+                            if (project.link !== '#') {
+                                window.open(project.link, '_blank');
+                            }
+                        };
+                        
+                        card.innerHTML = `
+                            <div class="project-image">${project.icon}</div>
+                            <div class="project-content">
+                                <div class="project-name">${project.name}</div>
+                                <div class="project-description">${project.description}</div>
+                                <a href="${project.link}" class="project-link" onclick="event.stopPropagation()">${currentLang === 'en' ? 'Learn more →' : 'Conoce más →'}</a>
+                            </div>
+                        `;
+                        
+                        projectsGrid.appendChild(card);
+                    });
+                    
+                    relatedProjects.style.display = 'block';
+                } else {
+                    relatedProjects.style.display = 'none';
+                }
+                
                 exploreMore.style.display = 'block';
                 
                 // Fade in
