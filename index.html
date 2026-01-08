@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro González</title>
+    <title>Pedro A. González</title>
     <style>
         * {
             margin: 0;
@@ -26,6 +26,50 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Background Video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .video-background video.active {
+            opacity: 0.99;
+        }
+
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, 
+                rgba(10, 10, 10, 0.95) 0%, 
+                rgba(10, 10, 10, 0.85) 30%,
+                rgba(10, 10, 10, 0.7) 50%,
+                rgba(10, 10, 10, 0.6) 100%);
+            pointer-events: none;
         }
 
         .container {
@@ -34,11 +78,14 @@
             min-height: 100vh;
             max-width: 1600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         /* Left Panel */
         .left-panel {
-            background: var(--bg-secondary);
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(10px);
             padding: 60px 40px;
             border-right: 1px solid var(--border);
             display: flex;
@@ -124,7 +171,7 @@
             padding-top: 32px;
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 0.5em;
             font-size: 14px;
         }
 
@@ -202,6 +249,8 @@
         /* Project Cards */
         .related-projects {
             margin-top: 48px;
+            position: relative;
+            z-index: 2;
         }
 
         .related-projects h3 {
@@ -220,7 +269,8 @@
         }
 
         .project-card {
-            background: var(--bg-secondary);
+            background: rgba(26, 26, 26, 0.9);
+            backdrop-filter: blur(10px);
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
@@ -351,6 +401,28 @@
     </style>
 </head>
 <body>
+    <!-- Background Video Container -->
+    <div class="video-background">
+        <video id="video0" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+        <video id="video1" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+        </video>
+        <video id="video2" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        </video>
+        <video id="video3" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+        <video id="video4" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+        </video>
+        <video id="video5" muted loop playsinline>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <div class="container">
         <!-- Left Panel -->
         <div class="left-panel">
@@ -371,8 +443,8 @@
             </div>
             
             <div class="language-toggle">
-                <button class="lang-btn active" data-lang="en">English</button>
-                <button class="lang-btn" data-lang="es">Español</button>
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
             </div>
         </div>
         
@@ -710,6 +782,9 @@
             const projectsTitle = document.getElementById('projectsTitle');
             const projectsGrid = document.getElementById('projectsGrid');
             
+            // Switch background video
+            switchVideo(index);
+            
             // Remove active state from all questions
             document.querySelectorAll('.question-item').forEach(q => q.classList.remove('active'));
             
@@ -764,6 +839,28 @@
             }, 300);
             
             activeQuestion = index;
+        }
+
+        function switchVideo(index) {
+            // Get all videos
+            const videos = document.querySelectorAll('.video-background video');
+            
+            // Fade out all videos
+            videos.forEach(video => {
+                video.classList.remove('active');
+                video.pause();
+            });
+            
+            // Fade in and play the selected video
+            const selectedVideo = document.getElementById(`video${index}`);
+            if (selectedVideo) {
+                selectedVideo.classList.add('active');
+                selectedVideo.currentTime = 0;
+                selectedVideo.play().catch(e => {
+                    // Handle autoplay restrictions
+                    console.log('Video autoplay prevented:', e);
+                });
+            }
         }
 
         // Language toggle
