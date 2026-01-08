@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro González</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a0a0a0;
+            --accent: #4a9eff;
+            --border: #2a2a2a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            min-height: 100vh;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Left Panel */
+        .left-panel {
+            background: var(--bg-secondary);
+            padding: 60px 40px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .portrait-container {
+            margin-bottom: 40px;
+        }
+
+        .portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 300;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .portrait img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .name {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .name h1 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .name p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .greeting {
+            margin: 40px 0 32px;
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .questions {
+            flex: 1;
+        }
+
+        .question-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .question-item:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .question-item.active {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .language-toggle {
+            margin-top: auto;
+            padding-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .lang-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Right Panel */
+        .right-panel {
+            padding: 80px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .response-container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .response-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .response-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .response-title {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .response-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .response-text p {
+            margin-bottom: 20px;
+        }
+
+        .explore-more {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 24px 40px;
+            display: flex;
+            gap: 24px;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 1.4s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 80%, 100% { opacity: 0.3; }
+            40% { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 320px 1fr;
+            }
+            
+            .right-panel {
+                padding: 60px 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .left-panel {
+                padding: 40px 24px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+            
+            .portrait {
+                width: 160px;
+                height: 160px;
+                font-size: 56px;
+            }
+            
+            .right-panel {
+                padding: 40px 24px;
+            }
+            
+            .footer {
+                position: relative;
+                padding: 24px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="portrait-container">
+                <div class="portrait"><img src="./portrait.jpg" alt=""></div>
+                <div class="name">
+                    <h1>Pedro González</h1>
+                    <p>Cancún, Mexico</p>
+                </div>
+            </div>
+            
+            <div class="greeting" id="greeting">
+                Hello. What would you like to know?
+            </div>
+            
+            <div class="questions" id="questions">
+                <!-- Questions will be populated by JS -->
+            </div>
+            
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="es">Español</button>
+            </div>
+        </div>
+        
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="response-container">
+                <div class="response-content" id="responseContent">
+                    <div class="response-title" id="responseTitle"></div>
+                    <div class="response-text" id="responseText"></div>
+                    <div class="explore-more" id="exploreMore" style="display: none;">
+                        Would you like to explore something else?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="mailto:pedro@example.com">Email</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+    </div>
+
+    <script>
+        const content = {
+            en: {
+                greeting: "Hello. What would you like to know?",
+                exploreMore: "Would you like to explore something else?",
+                questions: [
+                    {
+                        q: "What drives your work in technology?",
+                        a: "I see technology as a form of infrastructure — something that should enable people to live fuller lives without constantly thinking about it. Early in my career, I worked on connectivity projects in rural Mexico, bringing internet to communities that had been overlooked. What struck me wasn't just the access, but how quickly people found their own uses for it: education, commerce, connection. I've carried that lesson forward: the best technology creates possibility, not dependency. Whether I'm building AI platforms or teaching engineers, I'm always asking: <em>What does this make possible that wasn't before?</em>"
+                    },
+                    {
+                        q: "Tell me about a project you're most proud of.",
+                        a: "Kaanbal.org stands out. We built community-owned internet infrastructure for Mayan communities in rural Mexico — places where telecom companies said it wasn't viable. But we approached it differently: we worked with local leaders to co-design the network, trained community members to maintain it, and structured it as theirs from day one. It wasn't just about connectivity; it was about agency. Years later, those networks are still running, managed locally, expanding. That taught me more about systems thinking than any classroom ever could. Real impact takes time, partnership, and humility."
+                    },
+                    {
+                        q: "How do you approach building teams and organizations?",
+                        a: "I believe in clarity of purpose and autonomy of execution. The best teams I've built — whether founding startups or leading university programs — share a clear <em>why</em>, but have freedom in the <em>how</em>. I hire for curiosity and systems thinking, not just technical skill. I also prioritize psychological safety: people do their best work when they feel safe to experiment, fail, and ask hard questions. As a leader, my job isn't to have all the answers — it's to ask the right questions and create conditions where others can thrive. Trust scales better than control."
+                    },
+                    {
+                        q: "What's your perspective on AI and its future?",
+                        a: "AI is powerful, but it's not magic. I've built AI platforms for healthcare, customer intelligence, and automation, and what I've learned is this: AI amplifies whatever system you put it in. If your system is thoughtful and equitable, AI can accelerate good outcomes. If it's careless or extractive, AI will scale those harms faster than you can fix them. The real work isn't just in algorithms — it's in understanding context, power dynamics, and unintended consequences. I approach AI as an engineer, yes, but also as someone who's seen technology fail communities when designed without them."
+                    },
+                    {
+                        q: "What are you looking for in your next role or collaboration?",
+                        a: "I'm drawn to organizations that think in systems, not silos. I want to work with people who are building for the long term — whether that's infrastructure, policy, or platforms that reshape how we solve problems. I care about impact that outlasts me, work that's intellectually honest, and teams that value rigor and humanity in equal measure. I'm equally comfortable as a founder, a technical leader, or an advisor — what matters most is alignment on values and ambition. If you're building something that matters, and you need someone who can see the whole board, let's talk."
+                    },
+                    {
+                        q: "What do you do outside of technology?",
+                        a: "I play chess — not competitively, but seriously. It teaches patience, pattern recognition, and the discipline of thinking several moves ahead. I've also jumped out of planes more times than I probably should admit. Skydiving has a way of clarifying what matters: preparation, presence, and trusting your training when everything is moving fast. I travel often, both for work and curiosity. And I spend time in places where technology hasn't arrived yet, or where it's just beginning to. Those places remind me why I do this work at all."
+                    }
+                ]
+            },
+            es: {
+                greeting: "Hola. ¿Qué te gustaría saber?",
+                exploreMore: "¿Te gustaría explorar algo más?",
+                questions: [
+                    {
+                        q: "¿Qué impulsa tu trabajo en tecnología?",
+                        a: "Veo la tecnología como infraestructura — algo que debería permitir a las personas vivir vidas más plenas sin tener que pensar constantemente en ella. Al inicio de mi carrera, trabajé en proyectos de conectividad en México rural, llevando internet a comunidades que habían sido ignoradas. Lo que me impactó no fue solo el acceso, sino la rapidez con la que la gente encontró sus propios usos: educación, comercio, conexión. He llevado esa lección conmigo: la mejor tecnología crea posibilidades, no dependencias. Ya sea construyendo plataformas de IA o enseñando a ingenieros, siempre pregunto: <em>¿Qué hace posible esto que antes no lo era?</em>"
+                    },
+                    {
+                        q: "Cuéntame sobre un proyecto del que estés más orgulloso.",
+                        a: "Kaanbal.org destaca. Construimos infraestructura de internet comunitaria para comunidades mayas en México rural — lugares donde las empresas de telecomunicaciones dijeron que no era viable. Pero lo abordamos diferente: trabajamos con líderes locales para co-diseñar la red, capacitamos a miembros de la comunidad para mantenerla, y la estructuramos como suya desde el primer día. No se trataba solo de conectividad; se trataba de agencia. Años después, esas redes siguen funcionando, gestionadas localmente, expandiéndose. Eso me enseñó más sobre pensamiento sistémico que cualquier aula."
+                    },
+                    {
+                        q: "¿Cómo abordas la construcción de equipos y organizaciones?",
+                        a: "Creo en la claridad de propósito y la autonomía de ejecución. Los mejores equipos que he formado — ya sea fundando startups o liderando programas universitarios — comparten un <em>por qué</em> claro, pero tienen libertad en el <em>cómo</em>. Contrato por curiosidad y pensamiento sistémico, no solo habilidad técnica. También priorizo la seguridad psicológica: las personas hacen su mejor trabajo cuando se sienten seguras para experimentar, fallar y hacer preguntas difíciles. Como líder, mi trabajo no es tener todas las respuestas — es hacer las preguntas correctas y crear condiciones donde otros puedan prosperar. La confianza escala mejor que el control."
+                    },
+                    {
+                        q: "¿Cuál es tu perspectiva sobre la IA y su futuro?",
+                        a: "La IA es poderosa, pero no es magia. He construido plataformas de IA para salud, inteligencia de clientes y automatización, y lo que he aprendido es esto: la IA amplifica cualquier sistema en el que la pongas. Si tu sistema es reflexivo y equitativo, la IA puede acelerar buenos resultados. Si es descuidado o extractivo, la IA escalará esos daños más rápido de lo que puedes arreglarlos. El trabajo real no está solo en los algoritmos — está en entender contexto, dinámicas de poder y consecuencias no intencionadas. Abordo la IA como ingeniero, sí, pero también como alguien que ha visto a la tecnología fallar a comunidades cuando se diseña sin ellas."
+                    },
+                    {
+                        q: "¿Qué buscas en tu próximo rol o colaboración?",
+                        a: "Me atraen organizaciones que piensan en sistemas, no en silos. Quiero trabajar con personas que están construyendo para el largo plazo — ya sea infraestructura, política o plataformas que reformulen cómo resolvemos problemas. Me importa el impacto que me sobreviva, trabajo que sea intelectualmente honesto, y equipos que valoren rigor y humanidad en igual medida. Me siento cómodo como fundador, líder técnico o asesor — lo que más importa es alineación en valores y ambición. Si estás construyendo algo que importa, y necesitas alguien que pueda ver todo el tablero, hablemos."
+                    },
+                    {
+                        q: "¿Qué haces fuera de la tecnología?",
+                        a: "Juego ajedrez — no competitivamente, pero en serio. Enseña paciencia, reconocimiento de patrones y la disciplina de pensar varios movimientos adelante. También he saltado de aviones más veces de las que probablemente debería admitir. El paracaidismo tiene una forma de aclarar lo que importa: preparación, presencia, y confiar en tu entrenamiento cuando todo se mueve rápido. Viajo seguido, por trabajo y curiosidad. Y paso tiempo en lugares donde la tecnología aún no ha llegado, o donde apenas está comenzando. Esos lugares me recuerdan por qué hago este trabajo."
+                    }
+                ]
+            }
+        };
+
+        let currentLang = 'en';
+        let activeQuestion = null;
+
+        function renderQuestions() {
+            const questionsContainer = document.getElementById('questions');
+            questionsContainer.innerHTML = '';
+            
+            content[currentLang].questions.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-item';
+                questionDiv.textContent = item.q;
+                questionDiv.onclick = () => showResponse(index);
+                questionsContainer.appendChild(questionDiv);
+            });
+            
+            document.getElementById('greeting').textContent = content[currentLang].greeting;
+            document.getElementById('exploreMore').textContent = content[currentLang].exploreMore;
+        }
+
+        function showResponse(index) {
+            const item = content[currentLang].questions[index];
+            const responseContent = document.getElementById('responseContent');
+            const responseTitle = document.getElementById('responseTitle');
+            const responseText = document.getElementById('responseText');
+            const exploreMore = document.getElementById('exploreMore');
+            
+            // Remove active state from all questions
+            document.querySelectorAll('.question-item').forEach(q => q.classList.remove('active'));
+            
+            // Add active state to clicked question
+            document.querySelectorAll('.question-item')[index].classList.add('active');
+            
+            // Fade out
+            responseContent.classList.remove('visible');
+            
+            setTimeout(() => {
+                responseTitle.textContent = item.q;
+                responseText.innerHTML = `<p>${item.a}</p>`;
+                exploreMore.style.display = 'block';
+                
+                // Fade in
+                setTimeout(() => {
+                    responseContent.classList.add('visible');
+                }, 50);
+            }, 300);
+            
+            activeQuestion = index;
+        }
+
+        // Language toggle
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                if (lang === currentLang) return;
+                
+                currentLang = lang;
+                
+                // Update active state
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update HTML lang attribute
+                document.documentElement.lang = lang;
+                
+                // Re-render questions
+                renderQuestions();
+                
+                // If there was an active question, show its translation
+                if (activeQuestion !== null) {
+                    showResponse(activeQuestion);
+                } else {
+                    // Clear response area
+                    const responseContent = document.getElementById('responseContent');
+                    responseContent.classList.remove('visible');
+                    document.getElementById('exploreMore').style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize
+        renderQuestions();
+    </script>
+</body>
+</html>
