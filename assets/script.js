@@ -65,7 +65,13 @@
           };
 
           card.innerHTML = `
-                            <div class="project-image">${project.icon}</div>
+                            <div class="project-image">
+                                ${
+                                  project.imgUrl
+                                    ? `<img src="${project.imgUrl}" alt="${project.name}" />`
+                                    : `${project.icon}`
+                                }
+                            </div>
                             <div class="project-content">
                                 <div class="project-name">${project.name}</div>
                                 <div class="project-description">${
