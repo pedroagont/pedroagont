@@ -1,24 +1,70 @@
-### Hi there, I'm Pedro! <a href="https://linkedin.com/in/pedroagont/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="5%"></a>
+### Hi, I’m Pedro 👋  
+<a href="https://pedroagont.com">🌐 pedroagont.com</a>
 
-I’m an **Entrepreneur**, **Mechatronics Engineer** and **Full Stack Developer** with 9+ years of experience creating accessible, impactful technology. I work in the **intersection of innovation, education, and digital inclusion** by solving real-world problems and building a more connected, knowledge-driven society.
+I’m an **AI & Full-Stack Developer**, **Mechatronics Engineer**, and **Entrepreneur** with 10+ years of experience building **human-centered, scalable technology** across software, AI, physical computing, and education.
 
-As a **developer advocate**, I’ve mentored early-career professionals and led global teams to simplify complex topics, build MVPs, integrate APIs, and strengthen startup ecosystems. I’m also the co-founder of [**Kaanbal.org**](https://kaanbal.org), an initiative delivering internet connectivity and educational tech to 30+ underserved rural communities in Mexico, recognized by the **United Nations**, **MIT Media Lab**, **Internet Society**, and **World Economic Forum**.
-
-Beyond my professional life, I’m a chess player, runner, skydiver, and lifelong learner, always exploring how to amplify our human experience.
-
-✉️ Let’s connect: pgonzalez@post.com
+I work at the intersection of **engineering, innovation, and social impact**, designing systems that don’t just work, but **expand human agency, access, and understanding**.
 
 ---
 
+### 🚀 What I Do
+
+- 🧠 **AI & Full-Stack Systems** — Node.js, React, PostgreSQL, cloud-native architectures, AI-powered workflows  
+- 🏛️ **GovTech & Smart Cities** — data visualization, analytics, decision-support tools  
+- 🧩 **Physical Computing & IoT** — robotics, sensors, ESP32, Raspberry Pi  
+- 🎓 **Education & Mentorship** — trained hundreds of developers across Canada & Latin America  
+- 🌍 **Community-Driven Impact** — building locally owned tech infrastructure and ecosystems  
+
+I’ve collaborated with **governments, startups, universities, and international organizations**, and my work has been featured or supported by the **United Nations, MIT Media Lab, Internet Society, World Economic Forum, and Salzburg Global**.
+
+---
+
+### 🌱 Selected Impact
+
+- 🛰️ **Co-Founder & CTO — Kaanbal.org**  
+  Delivering community-owned internet connectivity and digital education to **30+ rural and Indigenous communities in Mexico**.
+
+- 🏙️ **AI Tech Lead — GovTech Analytics (2025–2026)**  
+  Leading AI-driven dashboards and data platforms for urban planning and public decision-making.
+
+- 🎓 **Mentor & Instructor — Lighthouse Labs / DEVF**  
+  5,000+ hours of mentoring, technical interviews, and full-stack instruction.
+
+---
 
 ### 🛠️ Tech Stack
 
-**Languages**: Node.js, Python, Ruby, C, Java, PHP  
-**Frontend**: HTML, CSS, JavaScript, jQuery, React, Bootstrap, Tailwind, Next.js, Three.js  
-**Backend**: Node.js + Express, Ruby on Rails, Python + Flask  
-**Databases**: PostgreSQL, MySQL, MongoDB  
-**API & Integrations**: Stripe, Zapier, Travelpayouts  
-**AI Tools**: Replit, OpenAI, Replicate, DeepSeek, Claude  
-**DevOps**: Bash scripting, CI/CD, GitHub Actions, DigitalOcean, hosting & domain setup  
-**CMS**: WordPress, Shopify, Squarespace  
-**IoT**: Arduino, Raspberry Pi, ESP8266, ESP32, M5
+**Core**  
+- **Languages:** JavaScript (Node.js), Python, Ruby, C, Bash  
+- **Frontend:** jQuery, React, Next.js, Tailwind, Bootstrap, Three.js  
+- **Backend:** Node.js, Express, Ruby on Rails, Flask  
+- **Databases:** PostgreSQL, MySQL, MongoDB, MariaDB  
+- **Testing:** Mocha, Chai, Jest, Cypress, react-testing-library, vitest  
+
+**AI & Data**  
+- OpenAI, Claude, Replicate, ml5.js  
+- Recharts, Chart.js, Leaflet, Power BI  
+
+**Cloud & DevOps**  
+- Bash scripting, Docker, CI/CD, GitHub Actions  
+- DigitalOcean, AWS, GCP, Azure, Render, Netlify  
+
+**IoT & Physical Computing**  
+- Arduino, Raspberry Pi, ESP8266 / ESP32, M5  
+
+**Payments & Integrations**  
+- Stripe, PayPal, Zapier, Travelpayouts  
+
+---
+
+### 🧭 Beyond Code
+
+Chess ♟️ · Distance running 🏃‍♂️ · Triathlon training 🏊‍♂️🚴‍♂️🏃‍♂️  
+Skydiving (50th jump) 🪂 · Music (guitar & bass) 🎸  
+Curious by default.
+
+---
+
+📬 **Let’s connect**  
+- Email: **pgonzalez@post.com**  
+- LinkedIn: https://linkedin.com/in/pedroagont
