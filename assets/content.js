@@ -5,9 +5,9 @@ const projects = {
       // Question 1: What drives your work in technology?
       [
         {
-          name: "Gobierno Digital de BJ",
+          name: "Gobierno Digital",
           description:
-            "AI Tech Lead Consultant of the GovTech Analytics Team (2025-2026), leveraging full-stack development, AI and collaborative dynamics to visualize and analyze urban and public-sector data. Using Node.js, React, JWT authentication, Leaflet, Recharts, OpenAI, and data analysis tools such as Power BI and Looker Studio to enable data-driven decision-making for smart city initiatives.",
+            "AI Tech Lead Consultant of GovTech Analytics Teams (2025-2026), leveraging full-stack development, AI and collaborative dynamics to visualize and analyze urban and public-sector data. Using Node.js, React, JWT authentication, Leaflet, Recharts, OpenAI, and data analysis tools such as Power BI and Looker Studio to enable data-driven decision-making for smart city initiatives.",
           icon: "🏙️",
           imgUrl: "/assets/img/cancun-inteligente.png",
           link: "http://cancun-inteligente.onrender.com",
@@ -465,7 +465,7 @@ const projects = {
       // Pregunta 1: ¿Qué impulsa tu trabajo en tecnología?
       [
         {
-          name: "Gobierno Digital de BJ",
+          name: "Gobierno Digital",
           description:
             "Consultor Líder de Tecnología e IA del equipo de Analítica GovTech (2025–2026), utilizando desarrollo full-stack, inteligencia artificial y dinámicas colaborativas para visualizar y analizar datos urbanos y del sector público. Uso de Node.js, React, autenticación JWT, Leaflet, Recharts, OpenAI y herramientas de análisis de datos como Power BI y Looker Studio para habilitar la toma de decisiones basada en datos en iniciativas de ciudades inteligentes.",
           icon: "🏙️",
@@ -925,7 +925,7 @@ const projects = {
       // Question 1 : Qu’est-ce qui motive ton travail dans la technologie ?
       [
         {
-          name: "Gouvernement Numérique de BJ",
+          name: "Gobierno Digital",
           description:
             "Consultant Principal en Technologie et IA au sein de l’équipe GovTech Analytics (2025–2026), combinant développement full-stack, intelligence artificielle et dynamiques collaboratives pour visualiser et analyser des données urbaines et du secteur public. Utilisation de Node.js, React, authentification JWT, Leaflet, Recharts, OpenAI et d’outils d’analyse de données tels que Power BI et Looker Studio afin de soutenir la prise de décision basée sur les données pour les initiatives de villes intelligentes.",
           icon: "🏙️",
@@ -1385,7 +1385,7 @@ const projects = {
       // Frage 1: Was treibt deine Arbeit in der Technologie an?
       [
         {
-          name: "Gobierno Digital de BJ",
+          name: "Gobierno Digital",
           description:
             "AI Tech Lead Consultant des GovTech Analytics Teams (2025–2026), mit Fokus auf Full-Stack-Entwicklung, KI und kollaborative Arbeitsweisen zur Visualisierung und Analyse urbaner und öffentlicher Daten. Einsatz von Node.js, React, JWT-Authentifizierung, Leaflet, Recharts, OpenAI sowie Datenanalysetools wie Power BI und Looker Studio zur Unterstützung datenbasierter Entscheidungen für Smart-City-Initiativen.",
           icon: "🏙️",
