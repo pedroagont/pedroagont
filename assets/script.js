@@ -41,6 +41,14 @@
     // Add active state to clicked question
     document.querySelectorAll(".question-item")[index].classList.add("active");
 
+    const rightPanel = document.getElementById('rightPanel');
+    if (rightPanel) {
+        rightPanel.scrollIntoView({
+            behavior: 'smooth', // Optional: adds a smooth animation
+            block: 'start'      // Optional: aligns the top of the element to the top of the viewport
+        });
+    }
+
     // Fade out
     responseContent.classList.remove("visible");
 
