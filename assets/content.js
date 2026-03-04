@@ -5,14 +5,6 @@ const projects = {
       // Question 1: What drives your work in technology?
       [
         {
-          name: "Gobierno Digital",
-          description:
-            "AI Tech Lead Consultant of GovTech Analytics Teams (2025-2026), leveraging full-stack development, AI and collaborative dynamics to visualize and analyze urban and public-sector data. Using Node.js, React, JWT authentication, Leaflet, Recharts, OpenAI, and data analysis tools such as Power BI and Looker Studio to enable data-driven decision-making for smart city initiatives.",
-          icon: "🏙️",
-          imgUrl: "/assets/img/cancun-inteligente.png",
-          link: "http://cancun-inteligente.onrender.com",
-        },
-        {
           name: "Lighthouse Labs Inc",
           description:
             "Full-Stack Development Mentor, Instructor, and Technical Interviewer (2021–2025), delivered 5,000+ hours of training professionals in Canada through full-stack PERN (Node.js, Express, PostgreSQL, ReactJS) and Ruby on Rails software AI-powered bootcamps, with real-world projects, mentoring, code reviews and 1:1 sessions.",
